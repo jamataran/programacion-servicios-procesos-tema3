@@ -1,0 +1,14 @@
+.divcenter{
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.titlelogin{
+  color:green;
+}
+
+.espacio{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
