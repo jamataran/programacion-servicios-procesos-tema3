@@ -2,7 +2,7 @@
   Este es el login de la aplicación
 </div>
 
-<div class="container divcenter">
+<div class="container divcenter" style="max-width: 500px;">
   <h3 [class.titlelogin]="this.titleLogin">{{title}}</h3>
   <div class="row espacio">
     <div class="row form-group">
@@ -34,57 +34,8 @@
       Contraseña demasiado corta
     </div>
     <div class="row">
-      <button type="submit" class="btn btn-primary" (click)="envioLogin();">Login</button>
+      <button type="submit" class="btn btn-success col-6" (click)="envioLogin();">Login</button>
+      <button type="submit" class="btn btn-primary col-6" [routerLink]="'/login/register'" >Registrarme</button>
     </div>
   </div>
-
-  <!-- NG FOR -->
-  <div class="row espacio">
-    <div class="col-6">
-      <h3>(ngFor) Ejemplos de contraseñas no seguras</h3>
-      <ul>
-        <li *ngFor="let passbad of this.ejemplosPassBad">{{passbad}}</li>
-      </ul>
-    </div>
-    <div class="col-6">
-      <h3>(Pipes) Ejemplos de contraseñas no seguras</h3>
-      <!-- Pipes -->
-      <div class="row">
-        Moneda: {{this.dataCurrency | currency: 'EUR'}}
-      </div>
-
-      <div class="row">
-        Fecha: {{this.dataDate | date: 'dd-mm-yyyy'}}
-      </div>
-
-      <div class="row">
-        JSON:
-        <pre>{{this.dataJson | json}}</pre>
-      </div>
-
-      <div class="row">
-        Texto: {{this.dataString | uppercase}}
-      </div>
-
-      <div class="row">
-        Texto al revés: {{this.dataString | reversed}}
-      </div>
-
-      <div class="row">
-        Porcentaje: {{this.dataPercent | percent: '2.1-1'}}
-      </div>
-
-      <div class="row">
-        Array: {{this.dataSlice | slice: 1 - 3}}
-      </div>
-    </div>
-  </div>
-
-  <!-- Service -->
-  <div class="row espacio">
-    <pre>
-      {{this.users |slice: 1 - 10| json}}
-    </pre>
-  </div>
-
 </div>

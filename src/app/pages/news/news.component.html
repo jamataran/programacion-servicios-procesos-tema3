@@ -1,0 +1,4 @@
+Introduce un ID para ver el detalle
+<input type="number" [(ngModel)]="id" />
+<a [routerLink]="['/news', id]">Ver detalle de la noticia {{id}}</a>
+

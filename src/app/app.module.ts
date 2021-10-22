@@ -6,6 +6,7 @@ import {AppComponent} from './app.component';
 import {PagesModule} from "./pages/pages.module";
 import {ComponentsModule} from "./components/components.module";
 import {PipesModule} from "./pipes/pipes.module";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import {PipesModule} from "./pipes/pipes.module";
     BrowserModule,
     AppRoutingModule,
     ComponentsModule,
+    HttpClientModule,
     PipesModule,
     PagesModule, // Importamos el modulo que queremos
   ],

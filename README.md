@@ -1,6 +1,6 @@
-# Programación de servicios y procesos: Angular II
+# Programación de servicios y procesos: Angular III
 
-Durante este tema (Tema 2 del aula virtual) comenzamos a dar los primeros pasos con Angular.
+Durante este tema (Tema 3 del aula virtual) continuamos con algún concepto más avanzado de Angular.
 
 ## Comandos utilizados (Angular CLI)
 
@@ -14,25 +14,31 @@ Durante este tema (Tema 2 del aula virtual) comenzamos a dar los primeros pasos 
 
 ## Conceptos clave
 
-* **IoC**: Inversión de control. En angular se lleva a cabo mediante inyección de depencias (DI), que no es más que permitir a Angular que instancie los objetos (bueno, si, es más, pero para nuestro nivel nos vale así)
-* **Proveedores**: En Angular, [Un proveedor](https://angular.io/guide/providers) es una instrucción para el sistema de DI que indica cómo obtener un valor para una dependencia. La mayoría de las veces, estas dependencias son servicios.
+* **IoC**: Inversión de control. En angular se lleva a cabo mediante inyección de depencias (DI), que no es más que
+  permitir a Angular que instancie los objetos (bueno, si, es más, pero para nuestro nivel nos vale así)
+* **Proveedores**: En Angular, [Un proveedor](https://angular.io/guide/providers) es una instrucción para el sistema de
+  DI que indica cómo obtener un valor para una dependencia. La mayoría de las veces, estas dependencias son servicios.
 * **Singleton**: Clase que, por definición, sólo existe una única vez.
+* **[Subject](https://rxjs.dev/guide/subject)**: Son un tipo de observables que nos permiten hacer multicasting, emitir
+  varios eventos a la vez.
+* **[Observable](https://rxjs.dev/guide/observable)**: Objeto (o colección de ellos) futuros, que potencialmente no
+  están disponibles.
 
 ## Otras cosas útiles
 
 * Instalación de librerías adicionales:
 
-  *  [Bootstrap](https://getbootstrap.com/)
+  * [Bootstrap](https://getbootstrap.com/)
     ```shell
     $ npm install boostrap --save
     ```
-  
-  *  [jQuery](https://jquery.com/)
+
+  * [jQuery](https://jquery.com/)
     ```shell
     $ npm install jquery --save
     ```
 
-  *  [Popper JS](https://popper.js.org/)
+  * [Popper JS](https://popper.js.org/)
     ```shell
     $ npm install popper.js --save
     ```
