@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormBuilder, Validators} from "@angular/forms";
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {HomeService} from "../../services/home.service";
 import {Router} from "@angular/router";
 import {ContactForm} from "../../model/contact-form";
@@ -81,6 +81,14 @@ export class RegisterComponent implements OnInit {
 
     // Redirigo al login
     this.router.navigate(['/login']);
+  }
+
+  /**
+   * Función que valida el formulario (se añade cuando se crea el grupo)
+   * @param frm Formulario
+   */
+  validadorPasswords(frm: FormGroup) {
+    return frm?.get('password')?.value === frm?.get('confirmedPassword')?.value ? null : {'mismatch': true};
   }
 
 }
