@@ -20,13 +20,18 @@ export class RegisterComponent implements OnInit {
   public listaDeDatos: Array<any> = [];
 
   // Declaro el formulario y sus validaciones
-  formularioContacto = this.fb.group({
-    nombre: ['', Validators.required],
-    apellido: ['', Validators.required],
-    email: ['', Validators.compose([Validators.email, Validators.required])],
-    asunto: ['', Validators.required],
-    mensaje: ['', Validators.required]
-  });
+  formularioContacto = this.fb.group(
+    { // Configuración de los controles
+      nombre: ['', Validators.required],
+      apellido: ['', Validators.required],
+      email: ['', Validators.compose([Validators.email, Validators.required])],
+      form_cemail: ['', Validators.compose([Validators.email, Validators.required])],
+      asunto: ['', Validators.required],
+      mensaje: ['', Validators.required]
+    },
+    { // Otras opciones del formulario
+      validators: this.validadorPasswords
+    });
 
 
   asincroniaCallback = (list: any, callback: any) => {
@@ -88,7 +93,12 @@ export class RegisterComponent implements OnInit {
    * @param frm Formulario
    */
   validadorPasswords(frm: FormGroup) {
-    return frm?.get('password')?.value === frm?.get('confirmedPassword')?.value ? null : {'mismatch': true};
+    let emailInicial = frm?.get('email')?.value;
+    let segundoEmail = frm?.get('form_cemail')?.value;
+    let esValido = emailInicial === segundoEmail;
+
+    let coincidenMails = esValido ? null : {'invalid': true};
+    return coincidenMails;
   }
 
 }

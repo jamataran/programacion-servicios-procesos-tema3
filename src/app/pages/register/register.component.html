@@ -36,8 +36,9 @@
                     </div>
                   </div>
                 </div>
+
                 <div class="row">
-                  <div class="col-md-3">
+                  <div class="col-12">
                     <div class="form-group">
                       <label for="form_email">Email *</label>
                       <input id="form_email" type="email"
@@ -46,19 +47,19 @@
                              placeholder="Introduce tu email *"
                              required="required"
                              data-error="El email es obligatorio.">
+                      <label for="form_cemail">Confirmar Email *</label>
+                      <input id="form_cemail" type="email"
+                             formControlName="form_cemail"
+                             class="form-control"
+                             placeholder="Introduce tu email *"
+                             required="required"
+                             data-error="El email es obligatorio.">
                     </div>
-                    <div class="col-md-3">
-                      <div class="form-group">
-                        <label for="form_cemail">Confirmar Email *</label>
-                        <input id="form_cemail" type="email"
-                               formControlName="form_cemail"
-                               class="form-control"
-                               placeholder="Introduce tu email *"
-                               required="required"
-                               data-error="El email es obligatorio.">
-                      </div>
                   </div>
-                  <div class="col-md-6">
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
                     <div class="form-group">
                       <label for="form_need">Asunto *</label>
                       <select
@@ -75,6 +76,7 @@
                       </select></div>
                   </div>
                 </div>
+
                 <div class="row">
                   <div class="col-md-12">
                     <div class="form-group">
